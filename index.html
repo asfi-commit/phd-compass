@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f7fb">
+  <meta name="description" content="A private, offline-friendly companion for PhD research, ML learning, fitness and daily planning.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="PhD Compass">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>PhD Compass — Your research, on track</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="desktop-rail">
+      <a class="brand" href="#today" data-action="nav" data-page="today" aria-label="PhD Compass home">
+        <span class="brand-mark">✳</span><span class="brand-text"><b>PhD Compass</b><small>Personal research planner</small></span>
+      </a>
+      <nav class="rail-nav" id="desktop-nav" aria-label="Main navigation"></nav>
+      <div class="rail-foot"><span class="privacy-dot"></span> Private on this device <p>No account. No subscription.</p></div>
+    </aside>
+    <div class="app-main">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">✳</span><span>PhD Compass</span></div>
+        <div id="top-context" class="top-context"></div>
+        <div class="top-actions"><button type="button" id="go-today" class="icon-btn" title="Go to today" aria-label="Go to today">◉</button><button type="button" id="go-settings" class="icon-btn" title="Settings and backup" aria-label="Settings">⚙</button></div>
+      </header>
+      <main id="view" class="content" tabindex="-1"></main>
+    </div>
+    <nav id="bottom-nav" class="bottom-nav" aria-label="Bottom navigation"></nav>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="modal-root"></div>
+  <input type="file" id="import-file" accept="application/json,.json" hidden>
+  <script src="./seed.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
